@@ -5744,7 +5744,7 @@ public class IMenu extends javax.swing.JFrame {
         public javax.swing.JButton btnImprimirReporteDiario;
         public javax.swing.JButton btnImprimirReporteGlobal;
         public javax.swing.JButton btnImprimirTotalV;
-        private javax.swing.JPanel btnInfoFactura;
+        public javax.swing.JPanel btnInfoFactura;
         public javax.swing.JPanel btnInventario;
         public javax.swing.JButton btnLimpiarCliente;
         public javax.swing.JButton btnMostraTotalFacturado;
@@ -6068,7 +6068,7 @@ public class IMenu extends javax.swing.JFrame {
         public javax.swing.JMenuItem kardex;
         public javax.swing.JLabel lblAlertaCreacionCodeBarra;
         public javax.swing.JLabel lblCreditosFiltro;
-        private javax.swing.JLabel lblEditarInfoFactura;
+        public javax.swing.JLabel lblEditarInfoFactura;
         public javax.swing.JLabel lblEgresosFiltro;
         public javax.swing.JLabel lblEntradasKardex;
         public javax.swing.JLabel lblErrorCodBarra;
