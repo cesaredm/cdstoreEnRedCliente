@@ -729,9 +729,6 @@ public class IMenu extends javax.swing.JFrame {
                 lblGastosMenu = new javax.swing.JLabel();
                 jLabel16 = new javax.swing.JLabel();
                 logoClothing = new javax.swing.JLabel();
-                btnInfoFactura = new javax.swing.JPanel();
-                lblEditarInfoFactura = new javax.swing.JLabel();
-                jLabel103 = new javax.swing.JLabel();
                 lblUsuarioSistema = new javax.swing.JLabel();
                 jSeparator8 = new javax.swing.JSeparator();
 
@@ -5451,7 +5448,7 @@ public class IMenu extends javax.swing.JFrame {
                 lblMenuCerrarSesion.setText("Cerrar Sesión");
                 btnCerrarSesion.add(lblMenuCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(61, 11, -1, -1));
 
-                pnlMenuLateral.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, 200, 47));
+                pnlMenuLateral.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, 200, 47));
 
                 btnUsuarios.setBackground(new java.awt.Color(69, 76, 89));
                 btnUsuarios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -5506,21 +5503,6 @@ public class IMenu extends javax.swing.JFrame {
                 logoClothing.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
                 logoClothing.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/blessIcon.png"))); // NOI18N
                 pnlMenuLateral.add(logoClothing, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 80));
-
-                btnInfoFactura.setBackground(new java.awt.Color(69, 76, 89));
-                btnInfoFactura.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-                btnInfoFactura.setPreferredSize(new java.awt.Dimension(170, 43));
-                btnInfoFactura.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-                lblEditarInfoFactura.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-                lblEditarInfoFactura.setForeground(new java.awt.Color(255, 255, 255));
-                lblEditarInfoFactura.setText("Edición Factura");
-                btnInfoFactura.add(lblEditarInfoFactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 11, -1, -1));
-
-                jLabel103.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/editar.png"))); // NOI18N
-                btnInfoFactura.add(jLabel103, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 2, -1, 40));
-
-                pnlMenuLateral.add(btnInfoFactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, 200, 47));
 
                 lblUsuarioSistema.setFont(new java.awt.Font("Segoe UI Light", 3, 16)); // NOI18N
                 lblUsuarioSistema.setForeground(new java.awt.Color(255, 255, 255));
@@ -5744,7 +5726,6 @@ public class IMenu extends javax.swing.JFrame {
         public javax.swing.JButton btnImprimirReporteDiario;
         public javax.swing.JButton btnImprimirReporteGlobal;
         public javax.swing.JButton btnImprimirTotalV;
-        public javax.swing.JPanel btnInfoFactura;
         public javax.swing.JPanel btnInventario;
         public javax.swing.JButton btnLimpiarCliente;
         public javax.swing.JButton btnMostraTotalFacturado;
@@ -5797,7 +5778,6 @@ public class IMenu extends javax.swing.JFrame {
         private javax.swing.JLabel jLabel100;
         private javax.swing.JLabel jLabel101;
         private javax.swing.JLabel jLabel102;
-        private javax.swing.JLabel jLabel103;
         private javax.swing.JLabel jLabel104;
         private javax.swing.JLabel jLabel105;
         private javax.swing.JLabel jLabel106;
@@ -6068,7 +6048,6 @@ public class IMenu extends javax.swing.JFrame {
         public javax.swing.JMenuItem kardex;
         public javax.swing.JLabel lblAlertaCreacionCodeBarra;
         public javax.swing.JLabel lblCreditosFiltro;
-        public javax.swing.JLabel lblEditarInfoFactura;
         public javax.swing.JLabel lblEgresosFiltro;
         public javax.swing.JLabel lblEntradasKardex;
         public javax.swing.JLabel lblErrorCodBarra;

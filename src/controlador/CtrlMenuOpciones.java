@@ -73,7 +73,7 @@ public class CtrlMenuOpciones implements MouseListener, ActionListener, WindowLi
         this.menu.btnNotificaciones.addMouseListener(this);
         this.menu.btnCerrarSesion.addMouseListener(this);
         this.menu.btnVerificarVencimientos.addActionListener(this);
-        this.menu.btnInfoFactura.addMouseListener(this);
+//        this.menu.btnInfoFactura.addMouseListener(this);
         this.menu.addWindowListener(this);
         this.backup = new Respaldo(menu);
         this.p = new Productos();
@@ -146,7 +146,7 @@ public class CtrlMenuOpciones implements MouseListener, ActionListener, WindowLi
             menu.lblGastosMenu.setForeground(new java.awt.Color(255, 255, 255));
 //            
 //            menu.btnInfoFactura.setBackground(new java.awt.Color(72,72,72));
-            menu.lblEditarInfoFactura.setForeground(new java.awt.Color(255,255,255));
+//            menu.lblEditarInfoFactura.setForeground(new java.awt.Color(255,255,255));
             
             if(this.permiso == 2)
             {
@@ -203,7 +203,7 @@ public class CtrlMenuOpciones implements MouseListener, ActionListener, WindowLi
             menu.lblGastosMenu.setForeground(new java.awt.Color(255, 255, 255));
 //            
 //            menu.btnInfoFactura.setBackground(new java.awt.Color(72,72,72));
-            menu.lblEditarInfoFactura.setForeground(new java.awt.Color(255,255,255));
+//            menu.lblEditarInfoFactura.setForeground(new java.awt.Color(255,255,255));
 
              if(this.permiso == 2)
             {
@@ -255,7 +255,7 @@ public class CtrlMenuOpciones implements MouseListener, ActionListener, WindowLi
             menu.lblGastosMenu.setForeground(new java.awt.Color(255, 255, 255));
 //            
 //            menu.btnInfoFactura.setBackground(new java.awt.Color(72,72,72));
-            menu.lblEditarInfoFactura.setForeground(new java.awt.Color(255,255,255));
+//            menu.lblEditarInfoFactura.setForeground(new java.awt.Color(255,255,255));
             
              if(this.permiso == 2)
             {
@@ -307,7 +307,7 @@ public class CtrlMenuOpciones implements MouseListener, ActionListener, WindowLi
             menu.lblGastosMenu.setForeground(new java.awt.Color(255, 255, 255));
 //            
 //            menu.btnInfoFactura.setBackground(new java.awt.Color(72,72,72));
-            menu.lblEditarInfoFactura.setForeground(new java.awt.Color(255,255,255));
+//            menu.lblEditarInfoFactura.setForeground(new java.awt.Color(255,255,255));
             
             if(this.permiso == 2)
             {
@@ -362,7 +362,7 @@ public class CtrlMenuOpciones implements MouseListener, ActionListener, WindowLi
             menu.lblGastosMenu.setForeground(new java.awt.Color(255, 255, 255));
 //            
 //            menu.btnInfoFactura.setBackground(new java.awt.Color(72,72,72));
-            menu.lblEditarInfoFactura.setForeground(new java.awt.Color(255,255,255));
+//            menu.lblEditarInfoFactura.setForeground(new java.awt.Color(255,255,255));
             
             if(this.permiso == 2)
             {
@@ -414,7 +414,7 @@ public class CtrlMenuOpciones implements MouseListener, ActionListener, WindowLi
             menu.lblMenuNotificacion.setForeground(new java.awt.Color(255, 255, 255));
 //            
 //            menu.btnInfoFactura.setBackground(new java.awt.Color(72,72,72));
-            menu.lblEditarInfoFactura.setForeground(new java.awt.Color(255,255,255));
+//            menu.lblEditarInfoFactura.setForeground(new java.awt.Color(255,255,255));
 
             if(this.permiso == 2)
             {
@@ -467,7 +467,7 @@ public class CtrlMenuOpciones implements MouseListener, ActionListener, WindowLi
             menu.lblGastosMenu.setForeground(new java.awt.Color(255, 255, 255));
 //            
 //            menu.btnInfoFactura.setBackground(new java.awt.Color(72,72,72));
-            menu.lblEditarInfoFactura.setForeground(new java.awt.Color(255,255,255));
+//            menu.lblEditarInfoFactura.setForeground(new java.awt.Color(255,255,255));
             
             if(this.permiso == 2)
             {
@@ -491,58 +491,58 @@ public class CtrlMenuOpciones implements MouseListener, ActionListener, WindowLi
                 menu.pnlInfoFactura.setVisible(false);
             }
         }
-        if (e.getSource() == menu.btnInfoFactura) {
-//            menu.btnInfoFactura.setBackground(new java.awt.Color(60,60,60));
-            menu.lblEditarInfoFactura.setForeground(new java.awt.Color(255,215,0));
-//            menu.lblTituloDeVentanas.setText("Editar Informacion de Factura");
+//        if (e.getSource() == menu.btnInfoFactura) {
+////            menu.btnInfoFactura.setBackground(new java.awt.Color(60,60,60));
+//            menu.lblEditarInfoFactura.setForeground(new java.awt.Color(255,215,0));
+////            menu.lblTituloDeVentanas.setText("Editar Informacion de Factura");
+//
+////            menu.btnClientes.setBackground(new java.awt.Color(72,72,72));
+//            menu.lblMenuClientes.setForeground(new java.awt.Color(255,255,255));
+////            
+////            menu.btnReportes.setBackground(new java.awt.Color(72,72,72));
+//            menu.lblMenuReportes.setForeground(new java.awt.Color(255, 255, 255));
+////
+////            menu.btnVentas.setBackground(new java.awt.Color(72,72,72));
+//            menu.lblMenuVentas.setForeground(new java.awt.Color(255, 255, 255));
+////
+////            menu.btnInventario.setBackground(new java.awt.Color(72,72,72));
+//            menu.lblMenuInventario.setForeground(new java.awt.Color(255, 255, 255));
+////
+////            menu.btnCerrarSesion.setBackground(new java.awt.Color(72,72,72));
+//            menu.lblMenuCerrarSesion.setForeground(new java.awt.Color(255, 255, 255));
+////
+////            menu.btnUsuarios.setBackground(new java.awt.Color(72,72,72));
+//            menu.lblMenuUsuarios.setForeground(new java.awt.Color(255, 255, 255));
+////
+////            menu.btnNotificaciones.setBackground(new java.awt.Color(72,72,72));
+//            menu.lblMenuNotificacion.setForeground(new java.awt.Color(255, 255, 255));
+////
+////            menu.btnTransacciones.setBackground(new java.awt.Color(72,72,72));
+//            menu.lblGastosMenu.setForeground(new java.awt.Color(255, 255, 255));
 
-//            menu.btnClientes.setBackground(new java.awt.Color(72,72,72));
-            menu.lblMenuClientes.setForeground(new java.awt.Color(255,255,255));
-//            
-//            menu.btnReportes.setBackground(new java.awt.Color(72,72,72));
-            menu.lblMenuReportes.setForeground(new java.awt.Color(255, 255, 255));
-//
-//            menu.btnVentas.setBackground(new java.awt.Color(72,72,72));
-            menu.lblMenuVentas.setForeground(new java.awt.Color(255, 255, 255));
-//
-//            menu.btnInventario.setBackground(new java.awt.Color(72,72,72));
-            menu.lblMenuInventario.setForeground(new java.awt.Color(255, 255, 255));
-//
-//            menu.btnCerrarSesion.setBackground(new java.awt.Color(72,72,72));
-            menu.lblMenuCerrarSesion.setForeground(new java.awt.Color(255, 255, 255));
-//
-//            menu.btnUsuarios.setBackground(new java.awt.Color(72,72,72));
-            menu.lblMenuUsuarios.setForeground(new java.awt.Color(255, 255, 255));
-//
-//            menu.btnNotificaciones.setBackground(new java.awt.Color(72,72,72));
-            menu.lblMenuNotificacion.setForeground(new java.awt.Color(255, 255, 255));
-//
-//            menu.btnTransacciones.setBackground(new java.awt.Color(72,72,72));
-            menu.lblGastosMenu.setForeground(new java.awt.Color(255, 255, 255));
-
-             if(this.permiso == 2)
-            {
-                menu.pnlClientes.setVisible(false);
-                menu.pnlVentas.setVisible(false);
-                menu.pnlReportes.setVisible(false);
-                menu.pnlInventario.setVisible(false);
-                menu.pnlUsuarios.setVisible(false);
-                menu.pnlNotificaciones.setVisible(false);
-                menu.pnlTransacciones.setVisible(false);
-//                menu.lblTituloDeVentanas.setText("");
-                menu.pnlBlanco.setVisible(true);
-            }else if(this.permiso == 1)
-            {
-                menu.pnlInfoFactura.setVisible(true);
-                menu.pnlClientes.setVisible(false);
-                menu.pnlVentas.setVisible(false);
-                menu.pnlReportes.setVisible(false);
-                menu.pnlInventario.setVisible(false);
-                menu.pnlUsuarios.setVisible(false);
-                menu.pnlNotificaciones.setVisible(false);
-                menu.pnlTransacciones.setVisible(false);
-            }
-        }
+//             if(this.permiso == 2)
+//            {
+//                menu.pnlClientes.setVisible(false);
+//                menu.pnlVentas.setVisible(false);
+//                menu.pnlReportes.setVisible(false);
+//                menu.pnlInventario.setVisible(false);
+//                menu.pnlUsuarios.setVisible(false);
+//                menu.pnlNotificaciones.setVisible(false);
+//                menu.pnlTransacciones.setVisible(false);
+////                menu.lblTituloDeVentanas.setText("");
+//                menu.pnlBlanco.setVisible(true);
+//            }else if(this.permiso == 1)
+//            {
+//                menu.pnlInfoFactura.setVisible(true);
+//                menu.pnlClientes.setVisible(false);
+//                menu.pnlVentas.setVisible(false);
+//                menu.pnlReportes.setVisible(false);
+//                menu.pnlInventario.setVisible(false);
+//                menu.pnlUsuarios.setVisible(false);
+//                menu.pnlNotificaciones.setVisible(false);
+//                menu.pnlTransacciones.setVisible(false);
+//            }
+//        }
         if (e.getSource() == menu.btnCerrarSesion) {
             menu.btnCerrarSesion.setBackground(new java.awt.Color(60,60,60));
             menu.lblMenuCerrarSesion.setForeground(new java.awt.Color(0, 222, 171));

@@ -1408,7 +1408,7 @@ public class CtrlFacturacion implements ActionListener, CaretListener, MouseList
 				menu.btnNotificaciones.setVisible(true);
 				menu.btnTransacciones.setVisible(true);
 				menu.btnInventario.setVisible(true);
-				menu.btnInfoFactura.setVisible(true);
+//				menu.btnInfoFactura.setVisible(true);
 				menu.btnAgregar.setEnabled(true);
 				menu.txtCodBarraFactura.setEnabled(true);
 				//deshabilitar boton guardarFactura
@@ -1511,7 +1511,7 @@ public class CtrlFacturacion implements ActionListener, CaretListener, MouseList
 			menu.btnNuevaFactura.setEnabled(false);//deshabilitar boton Nueva Factura
 			menu.btnEliminarFilaFactura.setEnabled(false);//deshabilitar boton EliminarFila Factura
 			menu.pnlReportes.setVisible(false);//ocultar panel Reportes
-			menu.btnInfoFactura.setVisible(false);
+//			menu.btnInfoFactura.setVisible(false);
 			menu.vistaDetalleFacturas.setVisible(false);//ocultar la ventana de detalle de facturaModel de reportes
 			menu.btnVentas.setVisible(false);
 			menu.btnReportes.setVisible(false);
