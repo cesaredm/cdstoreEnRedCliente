@@ -13,26 +13,27 @@ import javax.swing.JOptionPane;
  * @author CESAR DIAZ MARADIAGA
  */
 public class Conexiondb {
+	String db = "cdstorered";
+	String url = "jdbc:mysql://192.168.1.2/" + db;
+	String user = "clienteCDstore";
+	String pass = "19199697tsoCD";
+	public Conexiondb() {
 
-    String db = "cdstorered";
-    String url = "jdbc:mysql://localhost/" + db;
-    String user = "clienteCDstore";
-    String pass = "19199697tsoCD";
+	}
 
-    public Conexiondb() {
+	public Connection Conexion() {
+		Connection link = null;
+		try {
+			//cargamos el Driver a 
+			Class.forName("org.gjt.mm.mysql.Driver");
 
-    }
+			link = DriverManager.getConnection(this.url, this.user, this.pass);
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(null, e);
+		}
+		return link;
+	}
 
-    public Connection Conexion() {
-        Connection link = null;
-        try {
-            //cargamos el Driver a 
-            Class.forName("org.gjt.mm.mysql.Driver");
+	
 
-            link = DriverManager.getConnection(this.url, this.user, this.pass);
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, e);
-        }
-        return link;
-    }
 }

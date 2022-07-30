@@ -39,7 +39,6 @@ public class CtrlMenuOpciones implements MouseListener, ActionListener, WindowLi
     Transacciones gastos;
     RegistroMonedas registroMonedas;
     PagosCreditos pagos;
-    Configuraciones config;
     SocketServer socketServer;
     CtrlClientes ctrlClient;
     CtrlProducto ctrlP;
@@ -50,8 +49,8 @@ public class CtrlMenuOpciones implements MouseListener, ActionListener, WindowLi
     CtrlTransacciones ctrlGastos;
     CtrlPagos ctrlPagos;
     CtrlImprimirReport print;
-    CtrlInfoFactura CTRLinfo;
-    InfoFactura info;
+    CtrlConfiguraciones ctrlConfig;
+    Configuraciones config;
     CtrlDevoluciones devoluciones;
     CtrlGenCodBarra codBarra;
     CtrlRegistroMonedas ctrlRegistroMonedas;
@@ -84,10 +83,9 @@ public class CtrlMenuOpciones implements MouseListener, ActionListener, WindowLi
         this.usuarios = new Usuarios();
         this.gastos = new Transacciones();
         this.pagos = new PagosCreditos();
-        this.info = new InfoFactura();
-	this.config = new Configuraciones();
+        this.config = new Configuraciones();
         this.registroMonedas = new RegistroMonedas();
-        this.CTRLinfo = new CtrlInfoFactura(menu, info);
+        this.ctrlConfig= new CtrlConfiguraciones(menu,this.config);
         ctrlClient = new CtrlClientes(menu, c);
         ctrlP = new CtrlProducto(p, menu, permiso);
         Notificacion();
@@ -98,12 +96,11 @@ public class CtrlMenuOpciones implements MouseListener, ActionListener, WindowLi
         ctrlGastos = new CtrlTransacciones(menu, gastos);
         ctrlPagos = new CtrlPagos(menu, pagos);
 //        this.ctrlRegistroMonedas = new CtrlRegistroMonedas(menu, registroMonedas);
-        this.print = new CtrlImprimirReport(menu, info);
+        this.print = new CtrlImprimirReport(menu, this.config);
         this.devoluciones = new CtrlDevoluciones(menu, reportes);
         this.codBarra = new CtrlGenCodBarra(menu);
 	this.socketServer = new SocketServer();
 	this.socketServer.setfacturacionController(ctrlFact);
-	this.config.getIpServidor();
     }
 
     public void iniciarMenu() {

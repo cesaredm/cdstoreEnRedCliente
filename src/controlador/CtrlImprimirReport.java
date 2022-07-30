@@ -11,7 +11,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.table.DefaultTableModel;
 import vista.IMenu;
-import modelo.InfoFactura;
+import modelo.Configuraciones;
 import modelo.Creditos;
 import modelo.PagosCreditos;
 
@@ -22,16 +22,16 @@ import modelo.PagosCreditos;
 public class CtrlImprimirReport extends PrintReportes implements ActionListener {
 
 	IMenu menu;
-	InfoFactura info;
+	Configuraciones config;
 	Creditos creditosModel;
 	static int nCredito;
 	String cliente;
 
 	DefaultTableModel modelo;
 
-	public CtrlImprimirReport(IMenu menu, InfoFactura info) {
+	public CtrlImprimirReport(IMenu menu, Configuraciones info) {
 		this.menu = menu;
-		this.info = info;
+		this.config = info;
 		this.creditosModel = new Creditos();
 		this.modelo = new DefaultTableModel();
 		this.menu.btnMostrarInversion.addActionListener(this);
@@ -70,8 +70,8 @@ public class CtrlImprimirReport extends PrintReportes implements ActionListener 
 	}
 
 	public void imprimirReporteGlobal() {
-		info.obtenerInfoFactura();
-		String nombreTienda = info.getNombre();
+		config.obtenerInfoFactura();
+		String nombreTienda = config.getNombre();
 		String efectivoB = menu.lblIngresosCajaMes.getText(),
 			ventasT = menu.lblIngresosVentasTarjetaMes.getText(),
 			pagosE = menu.lblIngresosPagosEfectivoMes.getText(),
@@ -89,8 +89,8 @@ public class CtrlImprimirReport extends PrintReportes implements ActionListener 
 	}
 
 	public void imprimirReporteDiarioCordobas() {
-		info.obtenerInfoFactura();
-		String nombreTienda = info.getNombre();
+		config.obtenerInfoFactura();
+		String nombreTienda = config.getNombre();
 		Date fechaInicio = menu.jcFechaReporteDario.getDate();
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-YYYY");
 		String fechaR = sdf.format(fechaInicio);
@@ -115,8 +115,8 @@ public class CtrlImprimirReport extends PrintReportes implements ActionListener 
 	}
 
 	public void imprimirReporteDiarioDolares() {
-		info.obtenerInfoFactura();
-		String nombreTienda = info.getNombre();
+		config.obtenerInfoFactura();
+		String nombreTienda = config.getNombre();
 		Date fechaInicio = menu.jcFechaReporteDario.getDate();
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-YYYY");
 		String fechaR = sdf.format(fechaInicio);
@@ -140,8 +140,8 @@ public class CtrlImprimirReport extends PrintReportes implements ActionListener 
 	}
 
 	public void imprimirTotalV() {
-		info.obtenerInfoFactura();
-		String nombreTienda = info.getNombre();
+		config.obtenerInfoFactura();
+		String nombreTienda = config.getNombre();
 		String[] datos;
 		String f1, f2, t;
 		int filas = menu.tblMostrarTotalV.getRowCount();
@@ -161,11 +161,11 @@ public class CtrlImprimirReport extends PrintReportes implements ActionListener 
 	}
 
 	public void imprimirPmasV() {
-		info.obtenerInfoFactura();
+		config.obtenerInfoFactura();
 		int filas = menu.tblProductosMasVendidos.getRowCount(), n = 1;
 		Date f1 = menu.jc1.getDate(), f2 = menu.jc2.getDate();
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-YYYY");
-		String fecha1 = sdf.format(f1), fecha2 = sdf.format(f2), tienda = info.getNombre(), nombre, nombreCorto = "", marca, vendido;
+		String fecha1 = sdf.format(f1), fecha2 = sdf.format(f2), tienda = config.getNombre(), nombre, nombreCorto = "", marca, vendido;
 		String[] producto = new String[filas];
 		for (int i = 0; i < filas; i++) {
 			n = n + i;
@@ -185,8 +185,7 @@ public class CtrlImprimirReport extends PrintReportes implements ActionListener 
 	}
 
 	public void ReImprimirFactura() {
-		InfoFactura info = new InfoFactura();
-		info.obtenerInfoFactura();
+		this.config.obtenerInfoFactura();
 		int filaseleccionada = menu.tblReporte.getSelectedRow();
 		int filas = menu.tblMostrarDetalleFactura.getRowCount();
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-MMM-YYYY");
@@ -238,11 +237,11 @@ public class CtrlImprimirReport extends PrintReportes implements ActionListener 
 				cliente = this.creditosModel.NombreCliente(Integer.parseInt(creditoId));
 			}
 			Ticket d = new Ticket();
-			d.nameLocal = info.getNombre();
-			info.getDireccion();
-			d.telefono = info.getTelefono();
-			d.RFC = info.getRfc();
-			d.Rango = info.getRangoInicio() + " - " + info.getRangoFinal();
+			d.nameLocal = config.getNombre();
+			config.getDireccion();
+			d.telefono = config.getTelefono();
+			d.RFC = config.getRfc();
+			d.Rango = config.getRangoInicio() + " - " + config.getRangoFinal();
 			d.box = "1";
 			d.ticket = factura;
 			d.caissier = "Cajero";
@@ -258,7 +257,7 @@ public class CtrlImprimirReport extends PrintReportes implements ActionListener 
 			d.totalDolares = String.valueOf(totaldolares);
 			d.recibo = "";
 			d.change = "";
-			d.message = info.getAnotaciones();
+			d.message = config.getAnotaciones();
 			d.llenarTicket();
 			d.printFactura();
 		} catch (Exception err) {

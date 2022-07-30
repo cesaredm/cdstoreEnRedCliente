@@ -18,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
 import modelo.Creditos;
 import modelo.PagosCreditos;
 import modelo.Reportes;
-import modelo.InfoFactura;
+import modelo.Configuraciones;
 import samplesCommon.SamplesCommon;
 import vista.IMenu;
 
@@ -38,7 +38,7 @@ public class CtrlCreditos extends PrintReportes implements ActionListener, Caret
 	Reportes report;
 	CtrlReportes ctrlReport;
 	DefaultTableModel modelo;
-	InfoFactura info;
+	Configuraciones config;
 	DecimalFormat formato;
 
 	public CtrlCreditos(IMenu menu, Creditos creditos) {
@@ -50,7 +50,7 @@ public class CtrlCreditos extends PrintReportes implements ActionListener, Caret
 		this.modelo = new DefaultTableModel();
 		this.fecha = new Date();
 		this.formato = new DecimalFormat("###,###,###,#00.00");
-		info = new InfoFactura();
+		config = new Configuraciones();
 		this.menu.btnCrearCredito.addActionListener(this);
 		this.menu.btnNuevoCredito.addActionListener(this);
 		this.menu.btnActualizarCredito.addActionListener(this);

@@ -39,7 +39,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 import modelo.PagosCreditos;
 import modelo.AperturasYcierres;
-import modelo.InfoFactura;
+import modelo.Configuraciones;
 
 /**
  *
@@ -59,7 +59,7 @@ public class CtrlReportes implements ActionListener, MouseListener, KeyListener 
 	TableColumnModel modelColumn;
 	String idCliente = "";
 	DecimalFormat formato;
-	InfoFactura info;
+	Configuraciones config;
 	private boolean estadoC = true;
 
 	public CtrlReportes(IMenu menu, Reportes reportes) {
@@ -68,7 +68,7 @@ public class CtrlReportes implements ActionListener, MouseListener, KeyListener 
 		this.pagosC = new PagosCreditos();
 		this.aperturas = new AperturasYcierres();
 		this.fecha = new Date();
-		this.info = new InfoFactura();
+		this.config = new Configuraciones();
 		this.menu.btnReporteDiario.addActionListener(this);
 		this.menu.btnReporteDiario.setActionCommand("REPORTE-DIARIO");
 		this.menu.btnMostraTotalFacturado.addActionListener(this);
@@ -606,7 +606,7 @@ public class CtrlReportes implements ActionListener, MouseListener, KeyListener 
 			props.setProperty("mail.smtp.auth", "true");
 
 			Session sesion = Session.getDefaultInstance(props);
-			this.info.obtenerInfoFactura();
+			this.config.obtenerInfoFactura();
 
 			String correoRemitente = "cdsoft00@gmail.com";
 			String passwordRemitente = "19199697tsoCD";
@@ -623,7 +623,7 @@ public class CtrlReportes implements ActionListener, MouseListener, KeyListener 
 				+ "        <div class=\"col-sm-12\" style=\"width:98%; margin: auto; padding: 0;\">\n"
 				+ "            <div class=\"card border-success\" style=\"border:1px solid lime\">\n"
 				+ "                <div class=\"card-header text-center bg-dark\" style=\"margin-top: -2%; border-bottom: 1px solid gray; background-color: #383838; text-align: center; padding-top: 1%;\">\n"
-				+ "                    <h4 class=\"text-white\" style=\"color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">" + info.getNombre().toUpperCase() + "</h4>\n"
+				+ "                    <h4 class=\"text-white\" style=\"color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;\">" + config.getNombre().toUpperCase() + "</h4>\n"
 				+ "                </div>\n"
 				+ "                <div class=\"card-body\" style=\"padding: 1%;\">\n"
 				+ "                    <h4 class=\"card-title text-center\" style=\"font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-align: center; color:black\">REPORTE DIARIO</h4>\n"

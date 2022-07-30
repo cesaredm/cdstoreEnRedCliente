@@ -80,7 +80,6 @@ public class SocketServer implements Runnable {
 			switch (dato) {
 				case "Facturacion": {
 					this.factura = (Facturacion) clase;
-					this.facturacionController.guardarDetalle();
 					this.facturacionController.updateNumberFactura(this.factura.ObtenerIdFactura());
 					this.facturacionController.mostrarProductosVender("");
 				}
